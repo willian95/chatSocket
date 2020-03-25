@@ -16,7 +16,7 @@ io.on('connection', function (socket) {
       prefix = sender+"-"+receiver
 
     console.log(prefix)
-    io.emit("message-"+prefix, {text: message.message, sender_id: message.sender_id, receiver_id: message.receiver_id})
+    io.emit("message-"+prefix, {message: message.message, sender_id: message.sender_id, receiver_id: message.receiver_id})
   })
  
 });
